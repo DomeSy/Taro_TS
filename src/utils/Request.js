@@ -1,5 +1,5 @@
 import Taro, { getCurrentInstance } from '@tarojs/taro'
-import { Jump } from '@unilts'
+import { Jump } from '@utils'
 
 const CODE_SUCCESS = '200'
 const local = 'https://app-izz.zhengzhou.gov.cn/jmportalzs/interfaces/'
