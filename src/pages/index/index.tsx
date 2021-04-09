@@ -20,7 +20,7 @@ class Index extends Component {
     return (
       <View className='index'>
         {/* <Button /> */}
-        你哈
+        你哈靸鞋
       </View>
     )
   }
