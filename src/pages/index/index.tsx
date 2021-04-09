@@ -19,14 +19,13 @@ class Index extends Component {
 
   click = () => {
     console.log('1')
-    // Jump({url: 'login'})
+    Jump({url: '/login'})
   }
 
   render () {
     return (
       <View className='index'>
         <Button onClick={() => this.click()} />
-        你哈靸鞋
       </View>
     )
   }
