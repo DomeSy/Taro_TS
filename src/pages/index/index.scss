@@ -1,4 +1,13 @@
+@import "@styles/theme.scss";
+
 .index {
   flex-direction: column;
   width: 100%;
+  background: $font-family;
+}
+
+.test{
+  width: 100vw;
+  height: 300px;
+  background: $blue;
 }
