@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { View } from '@tarojs/components';
 import { AtButton } from 'taro-ui'
 
@@ -20,16 +19,6 @@ const Button = ({title = '提交', onClick}: Props) =>{
       <AtButton type='primary' className="DButton-btn" onClick={() => click()}>{title}</AtButton>
     </View>
   )
-=======
-import React from 'react';
-
-function Button() {
-  return (
-    <div>
-      Button
-    </div>
-  );
->>>>>>> 616e40926942994429ced65ea7a06bf1a194231a
 }
 
 export default Button;
