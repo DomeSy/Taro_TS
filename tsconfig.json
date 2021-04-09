@@ -21,7 +21,16 @@
     "typeRoots": [
       "node_modules/@types",
       "global.d.ts"
-    ]
+    ],
+    "paths":{
+      "@actions": ["src/actions"],
+      "@images": ["src/images"],
+      "@components": ["src/components"],
+      "@constants": ["src/constants"],
+      "@reducers": ["src/reducers"],
+      "@styles": ["src/styles"],
+      "@utils": ["src/utils"]
+    }
   },
   "exclude": [
     "node_modules",
