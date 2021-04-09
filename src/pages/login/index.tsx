@@ -26,7 +26,6 @@ class Index extends Component {
     return (
       <View className='index'>
         <Button onClick={() => this.click()} />
-        你哈靸鞋
       </View>
     )
   }

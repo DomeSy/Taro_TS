@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Button() {
+function Webview() {
   return (
     <div>
-      Button
+      Webview
     </div>
   );
 }
 
-export default Button;
+export default Webview;
