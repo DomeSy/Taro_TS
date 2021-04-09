@@ -33,19 +33,19 @@ const config = {
     options: {
     }
   },
-  sass: {
-    importer: sassImporter
-  },
+  // sass: {
+  //   importer: sassImporter
+  // },
   framework: 'react',
-  alias: {
-    '@actions': path.resolve(__dirname, '..', 'src/actions'),
-    '@images': path.resolve(__dirname, '..', 'src/images'),
-    '@components': path.resolve(__dirname, '..', 'src/components'),
-    '@constants': path.resolve(__dirname, '..', 'src/constants'),
-    '@reducers': path.resolve(__dirname, '..', 'src/reducers'),
-    '@styles': path.resolve(__dirname, '..', 'src/styles'),
-    '@utils': path.resolve(__dirname, '..', 'src/utils')
-  },
+  // alias: {
+  //   '@actions': path.resolve(__dirname, '..', 'src/actions'),
+  //   '@images': path.resolve(__dirname, '..', 'src/images'),
+  //   '@components': path.resolve(__dirname, '..', 'src/components'),
+  //   '@constants': path.resolve(__dirname, '..', 'src/constants'),
+  //   '@reducers': path.resolve(__dirname, '..', 'src/reducers'),
+  //   '@styles': path.resolve(__dirname, '..', 'src/styles'),
+  //   '@utils': path.resolve(__dirname, '..', 'src/utils')
+  // },
   mini: {
     postcss: {
       pxtransform: {
