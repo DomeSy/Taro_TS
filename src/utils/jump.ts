@@ -1,4 +1,5 @@
 import Taro from '@tarojs/taro'
+import { FC } from 'react'
 
 const PAGE_WEBVIEW = '/pages/webview/webview'
 
