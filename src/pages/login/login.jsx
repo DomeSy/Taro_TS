@@ -1,7 +1,6 @@
 import { Component } from 'react'
 import { View, } from '@tarojs/components'
-import { Button } from '@components';
-import { Jump } from '@utils';
+
 
 
 import './login.scss'

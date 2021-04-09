@@ -19,6 +19,7 @@ class Index extends Component {
 
   click = () => {
     console.log('1')
+    // Jump({url: 'login'})
   }
 
   render () {
