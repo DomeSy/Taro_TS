@@ -11,12 +11,6 @@ class Index extends Component {
     console.log(this.props, nextProps)
   }
 
-  componentWillUnmount () { }
-
-  componentDidShow () { }
-
-  componentDidHide () { }
-
   click = () => {
     console.log('1')
     Jump({url: '/login'})

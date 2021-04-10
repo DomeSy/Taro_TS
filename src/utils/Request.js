@@ -14,7 +14,6 @@ async function Request({url, payload = {}, method = 'GET', path = '', loading = 
     header['content-type'] = 'application/json'
   }
 
-
   return new Promise((resolve, reject) => {
     if(loading){
       Taro.showLoading({

@@ -1,5 +1,4 @@
 import Taro from '@tarojs/taro'
-import { FC } from 'react'
 
 const PAGE_WEBVIEW = '/pages/webview/webview'
 
@@ -24,7 +23,7 @@ const PAGE_WEBVIEW = '/pages/webview/webview'
     method为navigateBack时，的回跳第几层，默认为1
   getEnv:来源，设置非指定端不能进入
 */
-type Props = {
+interface Props {
   url?: string,
   title?: string,
   payload?: any,
