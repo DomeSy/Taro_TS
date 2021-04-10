@@ -6,10 +6,12 @@ import './index.scss'
 type Props = {
   title?: string,
   openType?: string,
-  onClick: any
+  onClick?: any,
+  getPhone?:any,
+  getUser?: any
 }
 
-const Button = ({title = '提交', openType, onClick=()=>{}}: Props) =>{
+const Button = ({title = '提交', openType, onClick=()=>{}, getPhone=()=>{}, getUser=()=>{}}: Props) =>{
 
   const click = () => {
     onClick ? onClick() : ''
@@ -22,10 +24,11 @@ const Button = ({title = '提交', openType, onClick=()=>{}}: Props) =>{
     <View className="DButton">
       <AtButton
         type='primary'
-        // openType={openType || undefined}
-        openType='getPhoneNumber'
+        openType={openType || undefined}
+        // openType='getPhoneNumber'
         className="DButton-btn"
-        onGetPhoneNumber={(e)=>onGetPhoneNumber(e)}
+        onGetPhoneNumber={(e) => getPhone(e)}
+        onGetUserInfo={(e) => getUser(e)}
         onClick={() => click()}
       >
         {title}

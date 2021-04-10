@@ -1,7 +1,7 @@
 import { Component } from 'react'
 import { View } from '@tarojs/components'
 import Taro from '@tarojs/taro'
-import { GetPhone } from './components'
+import { GetPhone, GetUserInfo } from './components'
 import { Button } from '@components'
 import './login.scss'
 
@@ -9,7 +9,6 @@ class Login extends Component {
 
   constructor(props){
     super(props)
-    console.log(this,'----111')
   }
 
 
@@ -31,6 +30,7 @@ class Login extends Component {
     return (
       <View className='Login'>
         <GetPhone />
+        <GetUserInfo />
       </View>
     )
   }
