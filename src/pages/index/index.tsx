@@ -6,7 +6,23 @@ import { Jump } from '@utils';
 
 import './index.scss'
 
-class Index extends Component {
+interface Iprops {
+  prop?: string
+}
+
+interface IState {
+  n: number
+}
+
+class Index extends Component<Iprops, IState> {
+
+  constructor(props: Iprops) {
+    super(props)
+    this.state = {
+      n: 1
+    }
+}
+
   componentWillReceiveProps (nextProps) {
     console.log(this.props, nextProps)
   }

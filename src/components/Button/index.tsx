@@ -5,18 +5,31 @@ import './index.scss'
 
 type Props = {
   title?: string,
+  openType?: string,
   onClick: any
 }
 
-const Button = ({title = '提交', onClick}: Props) =>{
+const Button = ({title = '提交', openType, onClick=()=>{}}: Props) =>{
 
   const click = () => {
     onClick ? onClick() : ''
   }
+  const onGetPhoneNumber = e => {
+    console.log(e,'--121')
+  }
 
   return (
     <View className="DButton">
-      <AtButton type='primary' className="DButton-btn" onClick={() => click()}>{title}</AtButton>
+      <AtButton
+        type='primary'
+        // openType={openType || undefined}
+        openType='getPhoneNumber'
+        className="DButton-btn"
+        onGetPhoneNumber={(e)=>onGetPhoneNumber(e)}
+        onClick={() => click()}
+      >
+        {title}
+      </AtButton>
     </View>
   )
 }
