@@ -42,7 +42,6 @@ async function Request({url, payload = {}, method = 'GET', path = '', loading = 
       if(loading){
         Taro.hideLoading()
       }
-      console.log(res,'--998')
       const { statusCode, data } = res
 
       if(statusCode !== CODE_SUCCESS){

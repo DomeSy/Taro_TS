@@ -1,15 +1,21 @@
 import { Component } from 'react'
 import Taro from '@tarojs/taro'
 import { Button } from '@components'
-import { Request } from '@utils'
+import { Request, Modal } from '@utils'
 
 class GetUserInfo extends Component {
 
   constructor(props){
     super(props)
   }
+
+  componentDidMount = () => {
+
+  }
+
   getUser = async (e) => {
-    const { errMsg, encryptedData, iv, rawData, signature} = e.detail;
+
+    const { errMsg, encryptedData, iv,} = e.detail;
 
     if(errMsg === 'getUserInfo:ok'){
       const login = await Taro.login()
@@ -19,7 +25,8 @@ class GetUserInfo extends Component {
         iv
       }
       const res = await Request({url: 'userInfo', payload})
-      console.log(res,'--')
+      // console.log(JSON.parse(res),'--')
+
     }
   }
 
