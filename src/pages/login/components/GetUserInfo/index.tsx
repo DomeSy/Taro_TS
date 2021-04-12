@@ -8,11 +8,18 @@ class GetUserInfo extends Component {
   constructor(props){
     super(props)
   }
-  getUser = (e) => {
-    const { errMsg, encryptedData, iv, rawData, signature} = e;
+  getUser = async (e) => {
+    const { errMsg, encryptedData, iv, rawData, signature} = e.detail;
+
     if(errMsg === 'getUserInfo:ok'){
-      // const res = Request({})
-      // console.log(res,'--')
+      const login = await Taro.login()
+      const payload = {
+        code: login.code,
+        encryptedData,
+        iv
+      }
+      const res = await Request({url: 'userInfo', payload})
+      console.log(res,'--')
     }
   }
 
