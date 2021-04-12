@@ -1,9 +1,7 @@
 import { USERINIT } from '../constants/user'
-import { reduxRquest } from '@unilts'
+import { ReduxRquest } from '@utils'
 
-export const DUSERINIT = (payload) => {
-  return {
-    type: USERINIT
-  }
-}
-
+export const DUSERINIT = (param:any = {}) => ReduxRquest({
+  type: USERINIT,
+  param
+}, 'user')

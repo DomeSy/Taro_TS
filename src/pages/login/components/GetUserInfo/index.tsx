@@ -1,12 +1,19 @@
 import { Component } from 'react'
-import Taro from '@tarojs/taro'
 import { Button } from '@components'
-import { OpenData } from '@tarojs/components'
-import { Request, Modal, Method } from '@utils'
+import { connect } from 'react-redux'
+import * as userActions from '../../../../actions/user'
 
-class GetUserInfo extends Component {
+interface Iprops {
+  userInfo?: any,
+  login?: boolean,
+  DUSERINIT?:any
+}
 
-  constructor(props){
+// @ts-ignore
+@connect(({user}) => ({...user}), { ...userActions})
+class GetUserInfo extends Component<Iprops, {}> {
+
+  constructor(props:Iprops){
     super(props)
   }
 
@@ -15,24 +22,9 @@ class GetUserInfo extends Component {
   }
 
   getUser = async (e) => {
-
     const { errMsg, encryptedData, iv } = e.detail;
-
-    if(errMsg === 'getUserInfo:ok'){
-      const login = await Taro.login()
-      const payload = {
-        code: login.code,
-        encryptedData,
-        iv
-      }
-      const res:any = await Request({url: 'userInfo', payload})
-      console.log(res,'010')
-
-      // const { unionId } = JSON.parse(res)
-      // const sign = Method.md5('xiongMaoBmx888'+ unionId)
-      // const result = await Request({url: 'getUserPhone', method:"POST", payload:{unionId, sign}})
-      // console.log(result,'00')
-    }
+    const { DUSERINIT } = this.props
+    DUSERINIT({ errMsg, encryptedData, iv })
   }
 
   render () {
