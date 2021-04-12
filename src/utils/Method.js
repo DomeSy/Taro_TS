@@ -5,7 +5,7 @@ class Method {
       str: 脱敏文本
       start: 开始位置
       end: 结束位置
-  */ 
+  */
   static Desensit = (str, start, end = str.length) => {
     for(let i = start;i < end; i++){
       str = str.replace(str[i], '*')
@@ -66,4 +66,6 @@ class Method {
     }
   }
 }
+
+
 export default Method
