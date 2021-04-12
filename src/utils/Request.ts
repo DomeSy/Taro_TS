@@ -24,7 +24,7 @@ async function Request({url, payload = {}, method = 'GET', path = '', loading = 
   }
 
   if (method === 'POST' && Taro.getEnv() !== 'WEB') {
-    header['content-type'] = 'application/json'
+    header['content-type'] = 'application/x-www-form-urlencoded'
   }
 
   return new Promise((resolve) => {
